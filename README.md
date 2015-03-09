@@ -17,6 +17,8 @@ The list of allowed parameters:
 - "proxy"
 - "singleton"
 
+Some patterns use browser console, some document body for output.
+
 
 --
 Feel free to send me any questions to oprohonnyi@gmail.com.
