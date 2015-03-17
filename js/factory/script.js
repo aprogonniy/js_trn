@@ -1,5 +1,5 @@
 /**
- * Factory pattern.
+ * Factory pattern implementation.
  * @author oprohonnyi@gmail.com
  * @license Apache-2.0
  */
@@ -155,8 +155,10 @@ var TicketEngine = function() {
  */
 var ticketEngine = new TicketEngine();
 
+console.info("Bingo Ticket 30");
 var ticket30 = ticketEngine.generateTicket(TYPE_BINGO_30);
 ticket30.render();
 
+console.info("Bingo Ticket 75");
 var ticket75 = ticketEngine.generateTicket(TYPE_BINGO_75);
 ticket75.render();

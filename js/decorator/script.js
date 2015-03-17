@@ -1,5 +1,5 @@
 /**
- * Decorator pattern.
+ * Decorator pattern implementation.
  * @author oprohonnyi@gmail.com
  * @license Apache-2.0
  */
@@ -118,39 +118,40 @@ DecoratedSandwich.prototype = new ISandwich();
 /*
  * Advanced sandwich.
  */
-var AdvancedSandwich = function() {};
+var AdvancedSandwich = function() {
+	this.setReference = function (sandwichReference) {
+	    this._sandwichReference = sandwichReference;
+	};
+	
+	this.addSauce = function (type) {
+	    var sauceCost = 2; // for sweet and salt sauces
+
+	    if (this._sandwichReference && this._sandwichReference._ingredients) {
+	        this._sandwichReference._ingredients.push("sauce: " + sauceCost);
+	    }
+	    if (this._sandwichReference && this._sandwichReference._price) {
+	        this._sandwichReference._price = this._sandwichReference._price + sauceCost;
+	    }
+	};
+	
+	this.addVegetables = function (type) {
+	    var vegetCost = 1; // for cucumber
+	    if (type == VEGET_POMID) {
+	        vegetCost = 1.5; // for tomato
+	    } else if (type == VEGET_CARRO) {
+	        vegetCost = 1.3; // for carrot
+	    }
+
+	    if (this._sandwichReference && this._sandwichReference._ingredients) {
+	        this._sandwichReference._ingredients.push("vegetables: " + vegetCost);
+	    }
+	    if (this._sandwichReference && this._sandwichReference._price) {
+	        this._sandwichReference._price = this._sandwichReference._price + vegetCost;
+	    }
+	};
+};
 
 AdvancedSandwich.prototype = new DecoratedSandwich();
-
-AdvancedSandwich.prototype.setReference = function (sandwichReference) {
-    this._sandwichReference = sandwichReference;
-};
-
-AdvancedSandwich.prototype.addSauce = function (type) {
-    var sauceCost = 2; // for sweet and salt sauces
-
-    if (this._sandwichReference && this._sandwichReference._ingredients) {
-        this._sandwichReference._ingredients.push("sauce: " + sauceCost);
-    }
-    if (this._sandwichReference && this._sandwichReference._price) {
-        this._sandwichReference._price = this._sandwichReference._price + sauceCost;
-    }
-};
-AdvancedSandwich.prototype.addVegetables = function (type) {
-    var vegetCost = 1; // for cucumber
-    if (type == VEGET_POMID) {
-        vegetCost = 1.5; // for tomato
-    } else if (type == VEGET_CARRO) {
-        vegetCost = 1.3; // for carrot
-    }
-
-    if (this._sandwichReference && this._sandwichReference._ingredients) {
-        this._sandwichReference._ingredients.push("vegetables: " + vegetCost);
-    }
-    if (this._sandwichReference && this._sandwichReference._price) {
-        this._sandwichReference._price = this._sandwichReference._price + vegetCost;
-    }
-};
 
 
 

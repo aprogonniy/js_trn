@@ -1,5 +1,5 @@
 /**
- * Factory method pattern.
+ * Factory method pattern implementation.
  * @author oprohonnyi@gmail.com
  * @license Apache-2.0
  */
@@ -139,24 +139,24 @@ var TicketContentGenerator = function() {
 /*
  * Bingo Ticket concrete factory.
  */
-var TicketEngine = function() {};
+var TicketEngine = function() {
+	this.generateTicket = function(type) {
+		var contentSize = 0,
+			content = "";
+
+		if (type == TYPE_BINGO_30) {
+			contentSize = LENGTH_BINGO_30;
+			content = this._generateRandomContent(contentSize);
+			return new BingoTicket30(content);
+		} else if (type == TYPE_BINGO_75) {
+			contentSize = LENGTH_BINGO_75;
+			content = this._generateRandomContent(contentSize);
+			return new BingoTicket75(content);
+		}
+	};
+};
 
 TicketEngine.prototype = new TicketContentGenerator();
-
-TicketEngine.prototype.generateTicket = function(type) {
-	var contentSize = 0,
-		content = "";
-
-	if (type == TYPE_BINGO_30) {
-		contentSize = LENGTH_BINGO_30;
-		content = this._generateRandomContent(contentSize);
-		return new BingoTicket30(content);
-	} else if (type == TYPE_BINGO_75) {
-		contentSize = LENGTH_BINGO_75;
-		content = this._generateRandomContent(contentSize);
-		return new BingoTicket75(content);
-	}
-};
 
 
 
@@ -165,8 +165,10 @@ TicketEngine.prototype.generateTicket = function(type) {
  */
 var ticketEngine = new TicketEngine();
 
+console.info("Bingo Ticket 30");
 var ticket30 = ticketEngine.generateTicket(TYPE_BINGO_30);
 ticket30.render();
 
+console.info("Bingo Ticket 75");
 var ticket75 = ticketEngine.generateTicket(TYPE_BINGO_75);
 ticket75.render();
