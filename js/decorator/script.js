@@ -1,46 +1,43 @@
+/**
+ * Decorator pattern.
+ * @author oprohonnyi@gmail.com
+ * @license Apache-2.0
+ */
+
 /*
  * Constants.
  */
-var BREAD_WHITE  = 1,
-    BREAD_BLACK  = 2,
+var BREAD_WHITE = 1,
+    BREAD_BLACK = 2,
     MEAT_CHICKEN = 3,
-    MEAT_BEEF    = 4,
-    CHEESE_SWI   = 5,
-    CHEESE_UKR   = 6,
-    SAUCE_SWEET  = 7,
-    SAUCE_SALT   = 8,
-    VEGET_CUCUM  = 9,
-    VEGET_POMID  = 10,
-    VEGET_CARRO  = 11;
+    MEAT_BEEF = 4,
+    CHEESE_SWI = 5,
+    CHEESE_UKR = 6,
+    SAUCE_SWEET = 7,
+    SAUCE_SALT = 8,
+    VEGET_CUCUM = 9,
+    VEGET_POMID = 10,
+    VEGET_CARRO = 11;
 
 /*
  * Interface.
  */
 var ISandwich = function () {
-    _ingredients   = null;
-    _price         = null;
-    getIngredients = function () {};
-    addBread       = function (type) {};
-    addMeat        = function (type) {};
-    addCheese      = function (type) {};
-    getPrice       = function () {};
+    this.getIngredients = function () {};
+    this.addBread = function (type) {};
+    this.addMeat = function (type) {};
+    this.addCheese = function (type) {};
+    this.getPrice = function () {};
 };
 
 /*
  * Simple sandwich.
  */
-var SimpleSandwich = function() {};
-
-SimpleSandwich.prototype = Object.create(ISandwich.prototype);
-
-SimpleSandwich.prototype = {
-    _ingredients: [],
-    _price: 0,
-    SimpleSandwich: function () {
-        this._ingredients = [];
-        this._price       = 0;
-    },
-    addBread: function (type) {
+var SimpleSandwich = function() {
+	this._ingredients = [];
+	this._price = 0;
+    
+    this.addBread = function (type) {
         var breadCost = 10; // for black bread
         if (type == BREAD_WHITE) {
             breadCost = 20; // for white bread
@@ -48,8 +45,8 @@ SimpleSandwich.prototype = {
 
         this._ingredients.push("bread: " + breadCost);
         this._price = this._price + breadCost;
-    },
-    addMeat: function (type) {
+    };
+    this.addMeat = function (type) {
         var meatCost = 30; // for chicken meat
         if (type == MEAT_BEEF) {
             meatCost = 40; // for beef
@@ -57,8 +54,8 @@ SimpleSandwich.prototype = {
 
         this._ingredients.push("meat: " + meatCost);
         this._price = this._price + meatCost;
-    },
-    addCheese: function (type) {
+    };
+    this.addCheese = function (type) {
         var cheeseCost = 20; // for Ukrainian cheese
         if (type == CHEESE_SWI) {
             cheeseCost = 50; // for Swiss cheese
@@ -66,60 +63,64 @@ SimpleSandwich.prototype = {
 
         this._ingredients.push("cheese: " + cheeseCost);
         this._price = this._price + cheeseCost;
-    },
-    getPrice: function () {
+    };
+    
+    this.getPrice = function () {
         return this._price;
-    },
-    getIngredients: function () {
+    };
+    this.getIngredients = function () {
         return this._ingredients;
-    }
+    };
 };
+
+SimpleSandwich.prototype = new ISandwich();
 
 /*
  * Sandwich decorator.
  */
-var DecoratedSandwich = function() {};
-
-DecoratedSandwich.prototype = Object.create(ISandwich.prototype);
-
-DecoratedSandwich.prototype = {
-    _sandwichReference: null,
-    setReference: function (sandwichReference) {
+var DecoratedSandwich = function() {
+	this._sandwichReference = null;
+	
+	this.setReference = function (sandwichReference) {
         this._sandwichReference = sandwichReference;
-    },
-    addBread: function (type) {
+    };
+    
+    this.addBread = function (type) {
         if (this._sandwichReference) {
             this._sandwichReference.addBread(type);
         }
-    },
-    addMeat: function (type) {
+    };
+    this.addMeat = function (type) {
         if (this._sandwichReference) {
             this._sandwichReference.addMeat(type);
         }
-    },
-    addCheese: function (type) {
+    };
+    this.addCheese = function (type) {
         if (this._sandwichReference) {
             this._sandwichReference.addCheese(type);
         }
-    },
-    getPrice: function () {
+    };
+    
+    this.getPrice = function () {
         if (this._sandwichReference) {
             return this._sandwichReference.getPrice();
         }
-    },
-    getIngredients: function () {
+    };
+    this.getIngredients = function () {
         if (this._sandwichReference) {
             return this._sandwichReference.getIngredients();
         }
-    }
+    };
 };
+
+DecoratedSandwich.prototype = new ISandwich();
 
 /*
  * Advanced sandwich.
  */
 var AdvancedSandwich = function() {};
 
-AdvancedSandwich.prototype = Object.create(DecoratedSandwich.prototype);
+AdvancedSandwich.prototype = new DecoratedSandwich();
 
 AdvancedSandwich.prototype.setReference = function (sandwichReference) {
     this._sandwichReference = sandwichReference;
@@ -153,10 +154,8 @@ AdvancedSandwich.prototype.addVegetables = function (type) {
 
 
 
-
-
 /*
- * Pattern use.
+ * Using.
  */
 
 // Simple sandwich

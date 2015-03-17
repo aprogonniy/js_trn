@@ -1,7 +1,13 @@
+/**
+ * Patterns launcher.
+ * @author oprohonnyi@gmail.com
+ * @license Apache-2.0
+ */
+
 /*
  * Application constants.
  */
-var PATTERN_VALUES = [ 'decorator' ];
+var PATTERN_VALUES = [ "decorator", "factory", "factory_method" ];
 var JS_DIR = "js/";
 
 /*
@@ -29,7 +35,7 @@ for (var j = 0; j < $_GET.length; j++) {
 }
 
 /*
- * Load requested pattern
+ * Load requested pattern.
  */
 if (currentPattern !== null) {
 	// Requested pattern is presented in PATTERN_VALUES array
@@ -42,7 +48,7 @@ if (currentPattern !== null) {
 	// There is no coincidence between $_GET and PATTERN_VALUES arrays
 	var errorMessage = "<div class=\"error\">Unknown pattern should be load. Please add \"?\{PATTERN_NAME\}\" parameter to page URL.<br><br>Available values: <ul>";
 	for (var j = 0; j < PATTERN_VALUES.length; j++) {
-		errorMessage += "<li>" + PATTERN_VALUES[j] + "</li>";
+		errorMessage += "<li><a href=\"?" + PATTERN_VALUES[j] + "\">" + PATTERN_VALUES[j] + "</a></li>";
 	}
 	errorMessage += "</ul></div>";
 
