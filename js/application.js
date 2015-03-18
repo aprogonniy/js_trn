@@ -7,7 +7,15 @@
 /*
  * Application constants.
  */
-var PATTERN_VALUES = [ "decorator", "factory", "factory_method", "proxy", "observer" ];
+var PATTERN_VALUES = [
+	"decorator",
+	"factory",
+	"factory_method",
+	"proxy",
+	"observer",
+	"prototype",
+	"flyweight"
+];
 var JS_DIR = "js/";
 
 /*
