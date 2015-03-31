@@ -105,11 +105,7 @@ BingoTicket75.prototype = new IBingoTicket();
  * Bingo Ticket factory.
  */
 var TicketContentGenerator = function() {
-	this.generateTicket = function(type) {
-		var contentSize = LENGTH_BINGO_30;
-		if (type == TYPE_BINGO_75) {
-			contentSize = LENGTH_BINGO_75;
-		}
+	this.generateTicket = function() {
 		return new IBingoTicket();
 	},
 
@@ -137,38 +133,46 @@ var TicketContentGenerator = function() {
 };
 
 /*
- * Bingo Ticket concrete factory.
+ * Bingo Ticket concrete factories.
  */
-var TicketEngine = function() {
-	this.generateTicket = function(type) {
-		var contentSize = 0,
+var TicketEngineBingo30 = function() {
+	this.generateTicket = function() {
+		var contentSize = LENGTH_BINGO_30,
 			content = "";
-
-		if (type == TYPE_BINGO_30) {
-			contentSize = LENGTH_BINGO_30;
-			content = this._generateRandomContent(contentSize);
-			return new BingoTicket30(content);
-		} else if (type == TYPE_BINGO_75) {
-			contentSize = LENGTH_BINGO_75;
-			content = this._generateRandomContent(contentSize);
-			return new BingoTicket75(content);
-		}
+		
+		content = this._generateRandomContent(contentSize);
+		
+		return new BingoTicket30(content);
 	};
 };
 
-TicketEngine.prototype = new TicketContentGenerator();
+TicketEngineBingo30.prototype = new TicketContentGenerator();
+
+var TicketEngineBingo75 = function() {
+	this.generateTicket = function() {
+		var contentSize = LENGTH_BINGO_75,
+			content = "";
+		
+		content = this._generateRandomContent(contentSize);
+		
+		return new BingoTicket75(content);
+	};
+};
+
+TicketEngineBingo75.prototype = new TicketContentGenerator();
 
 
 
 /*
  * Using
  */
-var ticketEngine = new TicketEngine();
+var ticketEngine30 = new TicketEngineBingo30();
+var ticketEngine75 = new TicketEngineBingo75();
 
 console.info("Bingo Ticket 30");
-var ticket30 = ticketEngine.generateTicket(TYPE_BINGO_30);
+var ticket30 = ticketEngine30.generateTicket();
 ticket30.render();
 
 console.info("Bingo Ticket 75");
-var ticket75 = ticketEngine.generateTicket(TYPE_BINGO_75);
+var ticket75 = ticketEngine75.generateTicket();
 ticket75.render();
