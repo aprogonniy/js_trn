@@ -5,21 +5,28 @@
  */
 
 /*
+ * Constants.
+ */
+var SPLASH_CONTAINER_ID = "script-holder-1",
+	DISPLAY_SHOW = "block",
+	DISPLAY_HIDE = "none";
+
+/*
  * Static class.
  */
 var BingoSplashScreen = function () {
     _instance = null;
-    _tagId    = "splash-screen";
+    _tagId    = SPLASH_CONTAINER_ID;
 
     function SplashScreen(tagId) {
     	this._id = tagId;
     	this.show = function() {
 			var spSc = document.getElementById(this._id);
-			spSc.style.display = "block";
+			spSc.style.display = DISPLAY_SHOW;
 		};
 		this.hide = function() {
     		var spSc = document.getElementById(this._id);
-    		spSc.style.display = "none";
+    		spSc.style.display = DISPLAY_HIDE;
     	};
     	this.changeTagId = function(tagId) {
     		this._id = tagId;
