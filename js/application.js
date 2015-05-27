@@ -14,7 +14,13 @@ var PATTERN_VALUES = [
 	"proxy",
 	"observer",
 	"prototype",
-	"flyweight"
+	"flyweight",
+	"mvc",
+	"mvp",
+	"mvvm",
+	"facade",
+	"interpreter",
+	"singleton"
 ];
 var JS_DIR = "js/";
 

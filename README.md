@@ -6,15 +6,18 @@ This branch contains implementations of patters (using native JS) from sources:
 
 To load the pattern implementation in browser, open index.html page and add a GET parameter with pattern name (e.g. "index.html?decorator").
 The list of allowed parameters:
-- "builder"
-- "chain" (chain of responsibility)
-- "command"
+- "decorator"
+- "factory"
 - "factory_method"
-- "memento"
-- "module" 
+- "proxy"
 - "observer"
 - "prototype"
-- "proxy"
+- "flyweight"
+- "mvc"
+- "mvp"
+- "mvvm"
+- "facade"
+- "interpreter"
 - "singleton"
 
 Some patterns use browser console, some document body for output.
