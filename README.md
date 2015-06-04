@@ -13,12 +13,18 @@ The list of allowed parameters:
 - "observer"
 - "prototype"
 - "flyweight"
+- "facade"
+- "interpreter"
+- "singleton",
+- "visitor",
+- "builder",
+- "command",
 - "mvc"
 - "mvp"
 - "mvvm"
-- "facade"
-- "interpreter"
-- "singleton"
+- "solid" (S.O.L.I.D principles impl),
+- "mixin" (mixins mechanism impl)
+
 
 Some patterns use browser console, some document body for output.
 

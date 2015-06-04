@@ -15,12 +15,17 @@ var PATTERN_VALUES = [
 	"observer",
 	"prototype",
 	"flyweight",
+	"facade",
+	"interpreter",
+	"singleton",
+	"visitor",
+	"builder",
+	"command",
 	"mvc",
 	"mvp",
 	"mvvm",
-	"facade",
-	"interpreter",
-	"singleton"
+	"solid",
+	"mixin"
 ];
 var JS_DIR = "js/";
 
