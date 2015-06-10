@@ -19,6 +19,7 @@ The list of allowed parameters:
 - "visitor",
 - "builder",
 - "command",
+- "iterator",
 - "mvc"
 - "mvp"
 - "mvvm"

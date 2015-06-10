@@ -21,6 +21,7 @@ var PATTERN_VALUES = [
 	"visitor",
 	"builder",
 	"command",
+	'iterator',
 	"mvc",
 	"mvp",
 	"mvvm",
