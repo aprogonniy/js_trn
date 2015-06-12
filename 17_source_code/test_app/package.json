@@ -1,0 +1,20 @@
+{
+  "name": "test_app",
+  "version": "1.0.0",
+  "description": "StealJS test app",
+  "main": "main.js",
+  "dependencies": {
+    "steal": "^0.10.5"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "jquery": "^2.1.4",
+    "steal": "^0.10.5",
+    "steal-tools": "^0.10.7"
+  },
+  "scripts": {
+    "test": "test"
+  },
+  "author": "oprohonnyi",
+  "license": "ISC"
+}

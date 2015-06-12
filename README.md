@@ -1,7 +1,7 @@
 # JavaScript training results
 
 1. TBD
-2. Results in directories: "2_sorting" (popular sorting algorithms), "2_sorting_merge" (merge sorting algorithms)
+2. Results could be found in directories: "2_sorting" (popular sorting algorithms), "2_sorting_merge" (merge sorting algorithms)
 3. TBD
 4. TBD
 5. None
@@ -16,4 +16,4 @@
 14. None
 15. None
 16. None
-17. TBD
+17. Results could be found in directory: "17_source_code" ("angular_test_app" - Yeoman test app; "test_app" - StealJS test app)
