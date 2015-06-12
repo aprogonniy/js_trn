@@ -20,6 +20,8 @@ The list of allowed parameters:
 - "builder",
 - "command",
 - "iterator",
+- "memento",
+- "chain" (chain of responsibility),
 - "mvc"
 - "mvp"
 - "mvvm"
