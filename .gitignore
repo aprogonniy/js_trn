@@ -29,3 +29,4 @@ node_modules
 *.project
 *.jsdtscope
 .settings/
+.idea/
