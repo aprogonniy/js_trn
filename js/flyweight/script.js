@@ -108,6 +108,7 @@ var DeliveryService = function() {
 			// Create new courier
 			courier = this._createNewCourier(type);
 		}
+		this._couriers[type] = courier;
 		
 		return courier;
 	};
@@ -125,7 +126,8 @@ var DeliveryService = function() {
 				throw "Unknown curier type requested!";
 				break;
 		}
-		this._couriers[type] = courier;
+		
+		return courier;
 	};
 };
 

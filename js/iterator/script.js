@@ -9,22 +9,17 @@
  * Iterator interface.
  */
 var IIterator = function() {
-	this.first = function() {
-	};
-	this.next = function() {
-	};
-	this.isDone = function() {
-	};
-	this.currentItem = function() {
-	};
+	this.first = function() { };
+	this.next = function() { };
+	this.isDone = function() { };
+	this.currentItem = function() { };
 };
 
 /*
  * Aggregates.
  */
 var IAggregator = function() {
-	this.createIterator = function() {
-	};
+	this.createIterator = function() { };
 };
 
 var List = function(elements) {
