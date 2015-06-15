@@ -22,6 +22,7 @@ The list of allowed parameters:
 - "iterator",
 - "memento",
 - "chain" (chain of responsibility),
+- "mediator",
 - "mvc"
 - "mvp"
 - "mvvm"

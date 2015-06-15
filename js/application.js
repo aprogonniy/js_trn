@@ -24,6 +24,7 @@ var PATTERN_VALUES = [
 	"iterator",
 	"memento",
 	"chain",
+    "mediator",
 	"mvc",
 	"mvp",
 	"mvvm",
