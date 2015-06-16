@@ -23,6 +23,7 @@ The list of allowed parameters:
 - "memento",
 - "chain" (chain of responsibility),
 - "mediator",
+- "strategy",
 - "mvc"
 - "mvp"
 - "mvvm"
