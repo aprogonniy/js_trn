@@ -2,7 +2,7 @@
 
 1. TBD
 2. Results could be found in directories: "2_sorting" (popular sorting algorithms), "2_sorting_merge" (merge sorting algorithms)
-3. TBD
+3. Results could be found in "3_data_structures" directory.
 4. TBD
 5. None
 6. Results of investigation could be found in "8_operating_system" directory.
