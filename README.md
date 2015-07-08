@@ -26,6 +26,7 @@ The list of allowed parameters:
 - "strategy",
 - "bridge",
 - "lazy_load",
+- "registry",
 - "mvc"
 - "mvp"
 - "mvvm"
