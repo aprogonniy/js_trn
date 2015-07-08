@@ -8,7 +8,7 @@
  * Application constants.
  */
 var PATTERN_VALUES = [
-"decorator",
+	"decorator",
 	"factory",
 	"factory_method", 
 	"proxy",
@@ -24,8 +24,10 @@ var PATTERN_VALUES = [
 	"iterator",
 	"memento",
 	"chain",
-    "mediator",
-    "strategy",
+    	"mediator",
+    	"strategy",
+    	"bridge",
+	"lazy_load",
 	"mvc",
 	"mvp",
 	"mvvm",

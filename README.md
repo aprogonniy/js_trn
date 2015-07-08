@@ -24,6 +24,8 @@ The list of allowed parameters:
 - "chain" (chain of responsibility),
 - "mediator",
 - "strategy",
+- "bridge",
+- "lazy_load",
 - "mvc"
 - "mvp"
 - "mvvm"
