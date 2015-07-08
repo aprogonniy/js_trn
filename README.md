@@ -38,4 +38,4 @@ Some patterns use browser console, some document body for output.
 
 
 --
-Feel free to send me any questions to oprohonnyi@gmail.com.
+Feel free to send me any questions or comments to oprohonnyi@gmail.com.
