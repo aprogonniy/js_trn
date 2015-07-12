@@ -1,0 +1,13 @@
+{
+  "name": "js-trn",
+  "version": "0.1.0",
+  "description": "JS training project",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-cli": "~0.1.13"
+  },
+  "private": true,
+  "dependencies": {
+    "grunt-jsdoc": "^0.6.7"
+  }
+}
