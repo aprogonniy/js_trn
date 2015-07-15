@@ -12,7 +12,7 @@
 10. See task #7 for results
 11. Results could be found here: http://www.slideshare.net/oprohonnyi/frontend-development-48651538
 12. -
-13. -
+13. Results could be found here: http://www.slideshare.net/oprohonnyi/google-chrome-devtools-features
 14. -
 15. -
 16. -
