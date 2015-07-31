@@ -25,6 +25,8 @@ The list of allowed parameters:
 - "mediator",
 - "strategy",
 - "bridge",
+- "composite",
+- "adapter",
 - "lazy_load",
 - "registry",
 - "mvc"

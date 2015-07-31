@@ -5,7 +5,7 @@
  */
 
 /*
- * Models
+ * Models.
  */
 var GameSettings = function(autoDubState, displayBestState) {
 	this._isAutoDubEnabled = autoDubState;
@@ -176,7 +176,7 @@ var Options = function(gameSettings, graphicsSettings, soundsSettings) {
 };
 
 /*
- * Controllers
+ * Controllers.
  */
 var OptionsController = function(model) {
 	this._model = null;
@@ -210,7 +210,7 @@ var OptionsController = function(model) {
 };
 
 /*
- * Views
+ * Views.
  */
 var OptionsView = function(containerName, model, controller) {
     this._model = null;
@@ -310,8 +310,10 @@ var OptionsView = function(containerName, model, controller) {
     this._model.setOnStateChangedHandler(this.modelActionsHandler);
 };
 
+
+
 /*
- * Using
+ * Using.
  */
 // Model
 var options = new Options(new GameSettings(true, false), new GraphicsSettings(

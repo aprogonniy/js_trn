@@ -66,7 +66,7 @@ UserException.prototype = new Exception();
 
 
 /*
- * Using
+ * Using.
  */
 console.info("Default scope exception");
 var runtimeException = new RuntimeException("runtime", "Runtime exception!", null);

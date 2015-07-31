@@ -67,11 +67,13 @@ var UserConfigForm = function(state) {
 	};
 };
 
+
+
 /*
- * Using
+ * Using.
  */
 
-//render default user config
+// render default user config
 var userConfigMemento = new UserConfigMemento(TRUE, TRUE, FALSE);
 
 var userForm = new UserConfigForm(userConfigMemento);
@@ -83,7 +85,7 @@ userForm.changeAdminParameter(TRUE);
 console.log("current state:");
 userForm.showMemento();
 
-//reset state
+// reset state
 userForm.setMemento(userConfigMemento);
 console.log("reseted state:");
 userForm.showMemento();

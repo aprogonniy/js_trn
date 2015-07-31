@@ -28,6 +28,7 @@ var PATTERN_VALUES = [
 	"strategy",
 	"bridge",
 	"composite",
+	"adapter",
 	"lazy_load",
 	"mvc",
 	"mvp",

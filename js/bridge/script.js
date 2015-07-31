@@ -132,7 +132,7 @@ SessionStorage.prototype = new IStorage();
 
 
 /*
- * Using
+ * Using.
  */
 var user = new User("pasha1", "UBL5Ke10pI4ST14gusfpF6lKy9iTl00w");
 user.setName("pasha1 user");
